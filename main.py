@@ -9,7 +9,7 @@ logger = logging.getLogger(__name__)
 # API credentials (set your actual values here)
 api_id = "21160213"
 api_hash = "3947b8737fd71b5c58edc1da33bd0e87"
-bot_token = "7270384815:AAE0Pckhzvb2y9rtX899fLJI0nMMSPZKtrk"
+bot_token = "7663435085:AAHNvLO90S2Xxfoz5dxwj8ZQ6rUdQ2IbHUs"
 
 # Initialize bot clients with different plugin directories and unique session names
 bot_bot = Client(
