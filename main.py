@@ -1,12 +1,5 @@
 from pyrogram import Client, idle
-import logging
 import sys
-from pyrogram.errors import FloodWait
-import time
-
-# Configure logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
 
 # API credentials (set your actual values here)
 api_id = "21160213"
@@ -40,36 +33,30 @@ approve_plugin = Client(
 
 # Start the bot clients with error handling
 if __name__ == "__main__":
-    while True:
-        try:
-            logger.info("Starting bots...")
-            bot_bot.start()
-            logger.info("MY_BOT_BOT started successfully.")
-
-            bot_plugin.start()
-            logger.info("MY_BOT_PLUGIN started successfully.")
-
-            approve_plugin.start()
-            logger.info("MY_APPROVE_PLUGIN started successfully.")
-
-            logger.info("All bots are running. Press Ctrl+C to stop.")
-            idle()  # Keep the bots running until interrupted
-
-            break  # Break the loop if everything is running successfully
-
-        except FloodWait as e:
-            logger.warning(f"Flood wait: sleeping for {e.x} seconds")
-            time.sleep(e.x)  # Wait for the specified time before retrying
-
-        except Exception as e:
-            logger.error(f"An error occurred: {e}")
-            sys.exit(1)  # Exit on other errors
-
-    # Stop the bots gracefully on exit
     try:
-        bot_bot.stop()
-        bot_plugin.stop()
-        approve_plugin.stop()
-        logger.info("All bots have stopped.")
+        print("Starting bots...")
+        bot_bot.start()
+        print("MY_BOT_BOT started successfully.")
+
+        bot_plugin.start()
+        print("MY_BOT_PLUGIN started successfully.")
+
+        approve_plugin.start()
+        print("MY_APPROVE_PLUGIN started successfully.")
+
+        print("All bots are running. Press Ctrl+C to stop.")
+        idle()  # Keep the bots running until interrupted
+
     except Exception as e:
-        logger.error(f"Error stopping bots: {e}")
+        print(f"An error occurred: {e}")
+        sys.exit(1)  # Exit on other errors
+
+    finally:
+        # Stop the bots gracefully on exit
+        try:
+            bot_bot.stop()
+            bot_plugin.stop()
+            approve_plugin.stop()
+            print("All bots have stopped.")
+        except Exception as e:
+            print(f"Error stopping bots: {e}")
