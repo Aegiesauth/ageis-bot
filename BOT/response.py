@@ -153,13 +153,10 @@ async def stripe_cvv_response(result, fullcc):
             "Invalid API Key provided" in result
             or "testmode_charges_only" in result
             or "api_key_expired" in result
-            or "Expired API Key provided" in result
-            or "api_key_expired" in result
-            or "invalid_request_error" in result
             or "Your account cannot currently make live charges." in result
         ):
             status   = "Dead 🔴"
-            response = "api key expired"
+            response = "api key expire"
             hits     = "NO"
 
         elif "Your card was declined." in result or "card was declined" in result:
