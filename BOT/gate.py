@@ -7,8 +7,8 @@ from asyncio import Semaphore
 logging.basicConfig(level=logging.INFO)
 
 # Stripe API keys
-sk = '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'
-pk = 'pk_live_51Oe5itKiK7vykOc70DH5o1EEnTVkFm1ssGU5SL3EJnYf7r3AYqjvkX09r0GVlPMG5856TkrZXJwSSTtEOkjS6dGb00OzbxBNrp'
+sk = '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'
+pk = 'pk_live_51PSZe7AhlztZCj07r5rZXrvJpsc6zWfoFfRiCVwJijIMntIRoB5H94CHh6XKm8ECeY18CgmzufkjMvArHkFxuHao00mq5uferC'
 
 # Directly update sk and pk without persisting
 def update_keys(new_sk, new_pk):
