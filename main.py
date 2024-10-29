@@ -1,6 +1,7 @@
 from pyrogram import Client, idle
 import logging
 import sys
+from pyrogram.errors import FloodWait
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
