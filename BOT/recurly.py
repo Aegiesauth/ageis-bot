@@ -9,7 +9,7 @@ from pyrogram.enums import ParseMode
 from approve_user.approve import is_user_approved  # Import approval check function
 
 # Replace with your actual user ID to limit access to only the bot owner
-OWNER_ID = 6492057414
+OWNER_ID = 123456789
 
 # Asynchronous function to fetch BIN information
 async def get_bin_info(bin_number):
@@ -85,7 +85,7 @@ async def recurly_request(client: Client, message: Message):
             'browser[color_depth]': '24',
             'browser[java_enabled]': 'false',
             'browser[language]': 'en-US',
-            'browser[referrer_url']': 'https://misstomrsbox.com/checkout/?choice=3-6&bonus=promo-namechange&plan=mtm-10mo-s',
+            'browser[referrer_url]': 'https://misstomrsbox.com/checkout/?choice=3-6&bonus=promo-namechange&plan=mtm-10mo-s',
             'browser[screen_height]': '768',
             'browser[screen_width]': '1366',
             'browser[time_zone_offset]': '-330',
