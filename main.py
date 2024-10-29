@@ -4,7 +4,7 @@ import sys
 # API credentials (set your actual values here)
 api_id = "21160213"
 api_hash = "3947b8737fd71b5c58edc1da33bd0e87"
-bot_token = "7663435085:AAHNvLO90S2Xxfoz5dxwj8ZQ6rUdQ2IbHUs"
+bot_token = "7663435085:AAE3czxHOMt3XRSsmM4JJXgmhzd9_cDNHdc"
 
 # Initialize bot clients
 bot_bot = Client(
